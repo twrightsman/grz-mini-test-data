@@ -1,0 +1,329 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BfArM-MVH/MVGenomseq/refs/tags/v1.1.4/GRZ/grz-schema.json",
+  "submission": {
+    "submissionDate": "2024-10-28",
+    "submissionType": "initial",
+    "tanG": "9e107d9d372bb6826bd81d3542a419d6cdebb5f6b8a32bdf8f7b77c61cbe3f30",
+    "localCaseId": "CASE12345",
+    "coverageType": "GKV",
+    "submitterId": "123456789",
+    "genomicDataCenterId": "GRZM00123",
+    "clinicalDataNodeId": "KDKM00456",
+    "diseaseType": "rare",
+    "genomicStudyType": "trio",
+    "genomicStudySubtype": "germline-only",
+    "labName": "Genomics Lab Humangenetik MRI"
+  },
+  "donors": [
+    {
+      "donorPseudonym": "9e107d9d372bb6826bd81d3542a419d6cdebb5f6b8a32bdf8f7b77c61cbe3f30",
+      "gender": "other",
+      "relation": "index",
+      "mvConsent": {
+        "presentationDate": "2023-06-10",
+        "version": "1.0",
+        "scope": [
+          {
+            "type": "permit",
+            "date": "2023-06-10",
+            "domain": "mvSequencing"
+          }
+        ]
+      },
+      "researchConsents": [
+        {
+          "schemaVersion": "2025.0.1",
+          "presentationDate": "2023-06-10",
+          "scope": {}
+        }
+      ],
+      "labData": [
+        {
+          "labDataName": "Blood DNA normal",
+          "tissueOntology": {
+            "name": "UBERON",
+            "version": "1.5"
+          },
+          "tissueTypeId": "UBERON:0000178",
+          "tissueTypeName": "blood",
+          "sampleDate": "2023-06-21",
+          "sampleConservation": "cryo-frozen",
+          "sequenceType": "dna",
+          "sequenceSubtype": "germline",
+          "fragmentationMethod": "sonication",
+          "libraryType": "wgs",
+          "libraryPrepKit": "TruSeq DNA PCR-Free",
+          "libraryPrepKitManufacturer": "Illumina",
+          "sequencerModel": "HiSeq 2500",
+          "sequencerManufacturer": "Illumina",
+          "kitName": "Nextera XT",
+          "kitManufacturer": "Illumina",
+          "enrichmentKitManufacturer": "other",
+          "enrichmentKitDescription": "KAPA Hyper Prep Kit",
+          "barcode": "NA12345",
+          "sequencingLayout": "paired-end",
+          "sequenceData": {
+            "bioinformaticsPipelineName": "DNASeq_Pipeline_XYZ",
+            "bioinformaticsPipelineVersion": "v3.4.1",
+            "referenceGenome": "GRCh38",
+            "percentBasesAboveQualityThreshold": {
+              "minimumQuality": 50,
+              "percent": 88
+            },
+            "meanDepthOfCoverage": 50,
+            "minCoverage": 30,
+            "targetedRegionsAboveMinCoverage": 0.9,
+            "nonCodingVariants": true,
+            "callerUsed": [
+              {
+                "name": "GATK",
+                "version": "4.2.0"
+              }
+            ],
+            "files": [
+              {
+                "filePath": "index_1_1.fq.gz",
+                "fileType": "fastq",
+                "checksumType": "sha256",
+                "fileChecksum": "704725da1673d9c9884e846bf86e4eeb8dba0711fefe1cc39a429ef39360fa7d",
+                "fileSizeInBytes": 848095,
+                "readOrder": "R1",
+                "readLength": 150,
+                "flowcellId": "C1",
+                "laneId": "L1"
+              },
+              {
+                "filePath": "index_1_2.fq.gz",
+                "fileType": "fastq",
+                "checksumType": "sha256",
+                "fileChecksum": "797d131a47e573944f0e19c6914777db73e0d27b010c740c5051507b9bb76471",
+                "fileSizeInBytes": 877093,
+                "readOrder": "R2",
+                "readLength": 150,
+                "flowcellId": "C1",
+                "laneId": "L1"
+              },
+              {
+                "filePath": "index_2_1.fq.gz",
+                "fileType": "fastq",
+                "checksumType": "sha256",
+                "fileChecksum": "38ff88efa125725c83508640809522c57a20475aacda7fe87a5fee0434e68545",
+                "fileSizeInBytes": 848095,
+                "readOrder": "R1",
+                "readLength": 150,
+                "flowcellId": "C2",
+                "laneId": "L1"
+              },
+              {
+                "filePath": "index_2_2.fq.gz",
+                "fileType": "fastq",
+                "checksumType": "sha256",
+                "fileChecksum": "a761d41d7b523f84d0ea743f7748a5e2028de39b1c3c7b75c7c3e4700e414ff5",
+                "fileSizeInBytes": 877093,
+                "readOrder": "R2",
+                "readLength": 150,
+                "flowcellId": "C2",
+                "laneId": "L1"
+              },
+              {
+                "filePath": "index.vcf.gz",
+                "fileType": "vcf",
+                "checksumType": "sha256",
+                "fileChecksum": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fileSizeInBytes": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "donorPseudonym": "9e107d9d372bb6826bd81l3542a419d6cdebb5f6b8a32bdf8f7b77c61cbe3f30",
+      "gender": "female",
+      "relation": "mother",
+      "mvConsent": {
+        "presentationDate": "2023-06-10",
+        "version": "1.0",
+        "scope": [
+          {
+            "type": "permit",
+            "date": "2023-06-10",
+            "domain": "mvSequencing"
+          }
+        ]
+      },
+      "researchConsents": [
+        {
+          "schemaVersion": "2025.0.1",
+          "presentationDate": "2023-06-10",
+          "scope": {}
+        }
+      ],
+      "labData": [
+        {
+          "labDataName": "Blood DNA normal",
+          "tissueOntology": {
+            "name": "UBERON",
+            "version": "1.5"
+          },
+          "tissueTypeId": "UBERON:0000178",
+          "tissueTypeName": "blood",
+          "sampleDate": "2023-06-21",
+          "sampleConservation": "cryo-frozen",
+          "sequenceType": "dna",
+          "sequenceSubtype": "germline",
+          "fragmentationMethod": "sonication",
+          "libraryType": "wgs",
+          "libraryPrepKit": "TruSeq DNA PCR-Free",
+          "libraryPrepKitManufacturer": "Illumina",
+          "sequencerModel": "HiSeq 2500",
+          "sequencerManufacturer": "Illumina",
+          "kitName": "Nextera XT",
+          "kitManufacturer": "Illumina",
+          "enrichmentKitManufacturer": "other",
+          "enrichmentKitDescription": "KAPA Hyper Prep Kit",
+          "barcode": "NA12345",
+          "sequencingLayout": "single-end",
+          "sequenceData": {
+            "bioinformaticsPipelineName": "DNASeq_Pipeline_XYZ",
+            "bioinformaticsPipelineVersion": "v3.4.1",
+            "referenceGenome": "GRCh38",
+            "percentBasesAboveQualityThreshold": {
+              "minimumQuality": 50,
+              "percent": 88
+            },
+            "meanDepthOfCoverage": 40,
+            "minCoverage": 30,
+            "targetedRegionsAboveMinCoverage": 0.9,
+            "nonCodingVariants": true,
+            "callerUsed": [
+              {
+                "name": "GATK",
+                "version": "4.2.0"
+              }
+            ],
+            "files": [
+              {
+                "filePath": "mother.fq.gz",
+                "fileType": "fastq",
+                "checksumType": "sha256",
+                "fileChecksum": "62caba6d6f4ec50d3ba59e7f0b97864587da66cf83bdcf867be2c5916b334065",
+                "fileSizeInBytes": 2716215,
+                "readLength": 150,
+                "flowcellId": "C1",
+                "laneId": "L1"
+              },
+              {
+                "filePath": "mother.vcf.gz",
+                "fileType": "vcf",
+                "checksumType": "sha256",
+                "fileChecksum": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fileSizeInBytes": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "donorPseudonym": "9e107d9d372bb6826bd81d3542a419d6cdebb5f6b8a32ezf8f7b77c61cbe3f30",
+      "gender": "male",
+      "relation": "father",
+      "mvConsent": {
+        "presentationDate": "2023-06-10",
+        "version": "1.0",
+        "scope": [
+          {
+            "type": "permit",
+            "date": "2023-06-10",
+            "domain": "mvSequencing"
+          }
+        ]
+      },
+      "researchConsents": [
+        {
+          "schemaVersion": "2025.0.1",
+          "presentationDate": "2023-06-10",
+          "scope": {}
+        }
+      ],
+      "labData": [
+        {
+          "labDataName": "Blood DNA normal",
+          "tissueOntology": {
+            "name": "UBERON",
+            "version": "1.5"
+          },
+          "tissueTypeId": "UBERON:0000178",
+          "tissueTypeName": "blood",
+          "sampleDate": "2023-06-21",
+          "sampleConservation": "cryo-frozen",
+          "sequenceType": "dna",
+          "sequenceSubtype": "germline",
+          "fragmentationMethod": "sonication",
+          "libraryType": "wgs",
+          "libraryPrepKit": "TruSeq DNA PCR-Free",
+          "libraryPrepKitManufacturer": "Illumina",
+          "sequencerModel": "HiSeq 2500",
+          "sequencerManufacturer": "Illumina",
+          "kitName": "Nextera XT",
+          "kitManufacturer": "Illumina",
+          "enrichmentKitManufacturer": "other",
+          "enrichmentKitDescription": "KAPA Hyper Prep Kit",
+          "barcode": "NA12345",
+          "sequencingLayout": "paired-end",
+          "sequenceData": {
+            "bioinformaticsPipelineName": "DNASeq_Pipeline_XYZ",
+            "bioinformaticsPipelineVersion": "v3.4.1",
+            "referenceGenome": "GRCh38",
+            "percentBasesAboveQualityThreshold": {
+              "minimumQuality": 50,
+              "percent": 88
+            },
+            "meanDepthOfCoverage": 40,
+            "minCoverage": 30,
+            "targetedRegionsAboveMinCoverage": 0.9,
+            "nonCodingVariants": true,
+            "callerUsed": [
+              {
+                "name": "GATK",
+                "version": "4.2.0"
+              }
+            ],
+            "files": [
+              {
+                "filePath": "father_1.fq.gz",
+                "fileType": "fastq",
+                "checksumType": "sha256",
+                "fileChecksum": "582101c3a579e8558f0601e14e89f0abb24424bf12df3966425254b9ccb208ab",
+                "fileSizeInBytes": 678349,
+                "readOrder": "R1",
+                "readLength": 150,
+                "flowcellId": "C1",
+                "laneId": "L1"
+              },
+              {
+                "filePath": "father_2.fq.gz",
+                "fileType": "fastq",
+                "checksumType": "sha256",
+                "fileChecksum": "8afeb83e27f48e15b00284a05c9959debb805489c86c5269c129c45713ee058c",
+                "fileSizeInBytes": 701508,
+                "readOrder": "R2",
+                "readLength": 150,
+                "flowcellId": "C1",
+                "laneId": "L1"
+              },
+              {
+                "filePath": "father.vcf.gz",
+                "fileType": "vcf",
+                "checksumType": "sha256",
+                "fileChecksum": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fileSizeInBytes": 0
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
