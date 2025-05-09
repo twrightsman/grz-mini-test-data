@@ -4,7 +4,7 @@
 
 Each genome is three "chromosomes" with a single gene centered in each.
 
-```
+```shell
 mkdir -p references/{GRCh37,GRCh38}
 # Credit: https://stackoverflow.com/a/69982328
 awk '$1 == "chr1"' < hg19_439_omim_genes.bed | shuf --random-source=<(yes 42) | head -n3 > references/GRCh37/test_regions.bed
@@ -26,7 +26,7 @@ awk -v OFS=$'\t' '{print $1, $2 - $2 + 500, $3 - $2 + 500}' < references/GRCh38/
 - single, tumor-only, GRCh37
 - 225x paired-end run of gene2 and gene3
 
-```
+```shell
 mkdir -p samples/panel
 simuG -seed 42 -refseq references/GRCh37/mini.fa.gz -snp_count 20 -indel_count 10 -prefix samples/panel/tumor
 tail -n2 < references/GRCh37/mini.genes.bed > samples/panel/targets.bed
