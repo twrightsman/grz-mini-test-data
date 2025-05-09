@@ -1,0 +1,15 @@
+[workspace]
+authors = ["Travis Wrightsman <travis.wrightsman@uni-tuebingen.de>"]
+channels = ["conda-forge", "bioconda"]
+name = "grz-test-data"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+bedtools = "=2.31.1"
+samtools = "=1.21"
+simug = "=1.0.1"
+art = "=2016.06.05"
+pbsim3 = "=3.0.5"

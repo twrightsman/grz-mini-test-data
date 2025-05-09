@@ -1,0 +1,8 @@
+# intermediate files
+references/
+samples/
+submissions/*/files/
+
+# pixi environments
+.pixi
+*.egg-info
