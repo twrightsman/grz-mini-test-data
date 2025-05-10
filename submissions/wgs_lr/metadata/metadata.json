@@ -1,0 +1,212 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BfArM-MVH/MVGenomseq/refs/tags/v1.1.4/GRZ/grz-schema.json",
+  "submission": {
+    "submissionDate": "2024-10-28",
+    "submissionType": "initial",
+    "tanG": "9e107d9d372bb6826bd81d3542a419d6cdebb5f6b8a32bdf8f7b77c61cbe3f30",
+    "localCaseId": "CASE12345",
+    "coverageType": "GKV",
+    "submitterId": "123456789",
+    "genomicDataCenterId": "GRZM00123",
+    "clinicalDataNodeId": "KDKM00456",
+    "diseaseType": "oncological",
+    "genomicStudyType": "single",
+    "genomicStudySubtype": "tumor+germline",
+    "labName": "Genomics Lab Humangenetik MRI"
+  },
+  "donors": [
+    {
+      "donorPseudonym": "9e107d9d372bb6826bd81d3542a419d6cdebb5f6b8a32bdf8f7b77c61cbe3f30",
+      "gender": "other",
+      "relation": "index",
+      "mvConsent": {
+        "presentationDate": "2023-06-10",
+        "version": "1.0",
+        "scope": [
+          {
+            "type": "permit",
+            "date": "2023-06-10",
+            "domain": "mvSequencing"
+          }
+        ]
+      },
+      "researchConsents": [
+        {
+          "schemaVersion": "2025.0.1",
+          "presentationDate": "2023-06-10",
+          "scope": {}
+        }
+      ],
+      "labData": [
+        {
+          "labDataName": "Blood DNA normal",
+          "tissueOntology": {
+            "name": "UBERON",
+            "version": "1.5"
+          },
+          "tissueTypeId": "UBERON:0000178",
+          "tissueTypeName": "blood",
+          "sampleDate": "2023-06-21",
+          "sampleConservation": "cryo-frozen",
+          "sequenceType": "dna",
+          "sequenceSubtype": "germline",
+          "fragmentationMethod": "none",
+          "libraryType": "wgs_lr",
+          "libraryPrepKit": "SMRTbell prep kit 3.0",
+          "libraryPrepKitManufacturer": "PacBio",
+          "sequencerModel": "Sequel",
+          "sequencerManufacturer": "PacBio",
+          "kitName": "SMRTbell™ Express Template Prep Kit",
+          "kitManufacturer": "PacBio",
+          "enrichmentKitManufacturer": "other",
+          "enrichmentKitDescription": "SMRTbell™ DNA Template Prep Kit",
+          "barcode": "NA12345",
+          "sequencingLayout": "single-end",
+          "sequenceData": {
+            "bioinformaticsPipelineName": "DNASeq_Pipeline_XYZ",
+            "bioinformaticsPipelineVersion": "v3.4.1",
+            "referenceGenome": "GRCh38",
+            "percentBasesAboveQualityThreshold": {
+              "minimumQuality": 50,
+              "percent": 88
+            },
+            "meanDepthOfCoverage": 40,
+            "minCoverage": 30,
+            "targetedRegionsAboveMinCoverage": 0.9,
+            "nonCodingVariants": true,
+            "callerUsed": [
+              {
+                "name": "GATK",
+                "version": "4.2.0"
+              },
+              {
+                "name": "DeepVariant",
+                "version": "1.1"
+              }
+            ],
+            "files": [
+              {
+                "filePath": "germline_0001.hifi.bam",
+                "fileType": "bam",
+                "checksumType": "sha256",
+                "fileChecksum": "abcd9515bab1a497b2a80b0da93a7e5a1c805985cd1df94554afefef5e19af34",
+                "fileSizeInBytes": 1517173,
+                "readLength": 9000
+              },
+              {
+                "filePath": "germline_0002.hifi.bam",
+                "fileType": "bam",
+                "checksumType": "sha256",
+                "fileChecksum": "49e5bfe118469a5bab2e9b62ca886de98ef2445c5cb4474ec0897576ea8b2334",
+                "fileSizeInBytes": 770710,
+                "readLength": 9000
+              },
+              {
+                "filePath": "germline_0003.hifi.bam",
+                "fileType": "bam",
+                "checksumType": "sha256",
+                "fileChecksum": "aac27fd2c698bb61c1d839542e32e3969b59a46200c6de84e830261c728d1e2c",
+                "fileSizeInBytes": 1602505,
+                "readLength": 9000
+              },
+              {
+                "filePath": "germline.vcf.gz",
+                "fileType": "vcf",
+                "checksumType": "sha256",
+                "fileChecksum": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fileSizeInBytes": 0
+              }
+            ]
+          }
+        },
+        {
+          "labDataName": "Tumor DNA sample",
+          "tissueOntology": {
+            "name": "UBERON",
+            "version": "1.5"
+          },
+          "tissueTypeId": "UBERON:0002112",
+          "tissueTypeName": "tumor",
+          "sampleDate": "2023-07-15",
+          "sampleConservation": "cryo-frozen",
+          "sequenceType": "dna",
+          "sequenceSubtype": "somatic",
+          "fragmentationMethod": "none",
+          "libraryType": "wgs_lr",
+          "libraryPrepKit": "Nanopore Prep",
+          "libraryPrepKitManufacturer": "Oxford Nanopore",
+          "sequencerModel": "Minion",
+          "sequencerManufacturer": "Oxford Nanopore",
+          "kitName": "Nanopore Kit",
+          "kitManufacturer": "Oxford Nanopore",
+          "enrichmentKitManufacturer": "other",
+          "enrichmentKitDescription": "Nanopore Prep Kit",
+          "barcode": "NA67890",
+          "sequencingLayout": "single-end",
+          "tumorCellCount": [
+            {
+              "count": 80,
+              "method": "bioinformatics"
+            }
+          ],
+          "sequenceData": {
+            "bioinformaticsPipelineName": "DNASeq_Pipeline_Tumor",
+            "bioinformaticsPipelineVersion": "v3.5.0",
+            "referenceGenome": "GRCh38",
+            "percentBasesAboveQualityThreshold": {
+              "minimumQuality": 50,
+              "percent": 88
+            },
+            "meanDepthOfCoverage": 110,
+            "minCoverage": 30,
+            "targetedRegionsAboveMinCoverage": 0.85,
+            "nonCodingVariants": true,
+            "callerUsed": [
+              {
+                "name": "GATK",
+                "version": "4.2.0"
+              },
+              {
+                "name": "Strelka",
+                "version": "2.9.10"
+              }
+            ],
+            "files": [
+              {
+                "filePath": "tumor_0001.fq.gz",
+                "fileType": "fastq",
+                "checksumType": "sha256",
+                "fileChecksum": "710bffa16b2bd40b06a839e3a123d1b65cf200e8e5b769be6f560fb528a47d42",
+                "fileSizeInBytes": 4292621,
+                "readLength": 4795
+              },
+              {
+                "filePath": "tumor_0002.fq.gz",
+                "fileType": "fastq",
+                "checksumType": "sha256",
+                "fileChecksum": "d228e0a499c19f57e2b2156f6348a1cff9e3e1d0bb5a41cc28ae9a4406d5a69f",
+                "fileSizeInBytes": 2314116,
+                "readLength": 6278
+              },
+              {
+                "filePath": "tumor_0003.fq.gz",
+                "fileType": "fastq",
+                "checksumType": "sha256",
+                "fileChecksum": "e0fc334299f523563769e3a10f14649f290d03d6eb8ecf0872e18fe85a8322cb",
+                "fileSizeInBytes": 4602001,
+                "readLength": 5594
+              },
+              {
+                "filePath": "tumor.vcf.gz",
+                "fileType": "vcf",
+                "checksumType": "sha256",
+                "fileChecksum": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fileSizeInBytes": 0
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

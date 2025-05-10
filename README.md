@@ -71,6 +71,18 @@ touch submissions/wgs/files/{index,mother,father}.vcf.gz
 ## WGS long-read
 
 - single, tumor+germline, GRCh38
-- 110X Nanopore tumor
-- 110X PacBio HiFi tumor in two BAM files
-- 40X PacBio HiFi germline in single BAM
+- 110X Nanopore tumor in multiple FASTQs
+- 40X PacBio HiFi germline in multiple BAMs
+
+```shell
+mkdir samples/wgs_lr
+simuG -seed 24-germline-lr -refSeq references/GRCh38/mini.fa.gz -snp_count 10 -indel_count 5 -prefix samples/wgs_lr/germline
+simuG -seed 24-tumor-lr -refSeq samples/wgs_lr/germline.simseq.genome.fa -snp_count 30 -indel_count 10 -prefix samples/wgs_lr/tumor
+pbsim --strategy wgs --seed 24-tumor-lr-nano --prefix samples/wgs_lr/tumor --genome samples/wgs_lr/tumor.simseq.genome.fa --depth 110 --method qshmm --qshmm "${PIXI_PROJECT_ROOT}/.pixi/envs/default/data/QSHMM-ONT-HQ.model" --accuracy-mean 0.90 --difference-ratio '39:24:36'
+pbsim --strategy wgs --seed 24-germline-lr-pr --prefix samples/wgs_lr/germline --genome samples/wgs_lr/germline.simseq.genome.fa --depth 40 --method errhmm --errhmm "${PIXI_PROJECT_ROOT}/.pixi/envs/default/data/ERRHMM-SEQUEL.model" --pass-num 10
+ccs samples/wgs_lr/germline_0001.bam samples/wgs_lr/germline_0001.hifi.bam
+ccs samples/wgs_lr/germline_0002.bam samples/wgs_lr/germline_0002.hifi.bam
+ccs samples/wgs_lr/germline_0003.bam samples/wgs_lr/germline_0003.hifi.bam
+mv samples/wgs_lr/{*.hifi.bam,*.fq.gz} submissions/wgs_lr/files/
+touch submissions/wgs_lr/files/{tumor,germline}.vcf.gz
+```

@@ -39,6 +39,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.3.1-hb9d3cd8_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.5-h2d0b736_3.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.5.0-h7b32b05_1.conda
+      - conda: https://conda.anaconda.org/bioconda/linux-64/pbccs-6.4.0-h9ee0642_0.tar.bz2
       - conda: https://conda.anaconda.org/bioconda/linux-64/pbsim3-3.0.5-h9948957_1.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/perl-5.32.1-7_hd590300_perl5.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/perl-carp-1.50-pl5321hd8ed1ab_0.tar.bz2
@@ -427,6 +428,12 @@ packages:
   license_family: Apache
   size: 3117410
   timestamp: 1746223723843
+- conda: https://conda.anaconda.org/bioconda/linux-64/pbccs-6.4.0-h9ee0642_0.tar.bz2
+  sha256: 8a291fc4313e575aa5e6a8eab5699abfbf61f8b97757aa662e54a35700199934
+  md5: cc6fd59a5aedeefc5e6cd8af7594559b
+  license: BSD-3-Clause-Clear
+  size: 3700091
+  timestamp: 1650354317627
 - conda: https://conda.anaconda.org/bioconda/linux-64/pbsim3-3.0.5-h9948957_1.tar.bz2
   sha256: 7494f41c4ff9adace4fde58e5b1dd4afb2ee235f4ab4356ad9fbc39031282158
   md5: 345e9f4ee5c57580a8701b5a9b459ca0
