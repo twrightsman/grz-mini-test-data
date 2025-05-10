@@ -47,10 +47,10 @@ touch submissions/panel/files/panel.vcf.gz
 
 ## WGS
 
-- trio, germline-only (rare disease), GRCH37
+- trio, germline-only (rare disease), GRCh37
 - 50X index paired-end in two 25X runs
 - 40X mother single-end run
-- 20X father paired-end, GRCh38
+- 20X father paired-end
   - should fail because under threshold
 
 ```shell
