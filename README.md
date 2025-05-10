@@ -1,5 +1,11 @@
 # Tiny synthetic test datasets for genomDE Model Project GRZs
 
+## Environment
+
+```shell
+pixi shell
+```
+
 ## Genomes
 
 Each genome is three "chromosomes" with a single gene centered in each.
