@@ -37,7 +37,7 @@ mkdir -p samples/panel
 simuG -seed 42 -refseq references/GRCh37/mini.fa.gz -snp_count 20 -indel_count 10 -prefix samples/panel/tumor
 tail -n2 < references/GRCh37/mini.genes.bed > samples/panel/targets.bed
 bedtools getfasta -fi samples/panel/tumor.simseq.genome.fa -bed samples/panel/targets.bed | fold -w 60 > samples/panel/targets.fa
-art_illumina --rndSeed 42 --seqSys HS25 --in samples/panel/targets.fa --paired --len 150 --fcov 225 --mflen 200 --sdev 10 --out samples/panel/tumor_
+art_illumina --rndSeed 42 --seqSys HS25 --in samples/panel/targets.fa --paired --len 150 --fcov 225 --mflen 500 --sdev 50 --out samples/panel/tumor_
 gzip -nf samples/panel/*.fq
 mkdir submissions/panel/files
 mv samples/panel/{targets.bed,*.fq.gz} submissions/panel/files/
@@ -50,10 +50,10 @@ mkdir -p samples/wgs
 simuG -seed 24-index -refSeq references/GRCh37/mini.fa.gz -snp_count 10 -indel_count 5 -prefix samples/wgs/index
 simuG -seed 24-mother -refSeq references/GRCh37/mini.fa.gz -snp_count 10 -indel_count 5 -prefix samples/wgs/mother
 simuG -seed 24-father -refSeq references/GRCh37/mini.fa.gz -snp_count 10 -indel_count 5 -prefix samples/wgs/father
-art_illumina --rndSeed 24-index --seqSys HS25 --in samples/wgs/index.simseq.genome.fa --paired --len 150 --fcov 25 --mflen 200 --sdev 10 --out samples/wgs/index_1_
-art_illumina --rndSeed 24-index-second --seqSys HS25 --in samples/wgs/index.simseq.genome.fa --paired --len 150 --fcov 25 --mflen 200 --sdev 10 --out samples/wgs/index_2_
+art_illumina --rndSeed 24-index --seqSys HS25 --in samples/wgs/index.simseq.genome.fa --paired --len 150 --fcov 25 --mflen 500 --sdev 50 --out samples/wgs/index_1_
+art_illumina --rndSeed 24-index-second --seqSys HS25 --in samples/wgs/index.simseq.genome.fa --paired --len 150 --fcov 25 --mflen 500 --sdev 50 --out samples/wgs/index_2_
 art_illumina --rndSeed 24-mother --seqSys HS25 --in samples/wgs/mother.simseq.genome.fa --len 150 --fcov 40 --out samples/wgs/mother
-art_illumina --rndSeed 24-father --seqSys HS25 --in samples/wgs/father.simseq.genome.fa --paired --len 150 --fcov 20 --mflen 200 --sdev 10 --out samples/wgs/father_
+art_illumina --rndSeed 24-father --seqSys HS25 --in samples/wgs/father.simseq.genome.fa --paired --len 150 --fcov 20 --mflen 500 --sdev 50 --out samples/wgs/father_
 gzip -nf samples/wgs/*.fq
 mkdir submissions/wgs/files
 mv samples/wgs/*.fq.gz submissions/wgs/files/
