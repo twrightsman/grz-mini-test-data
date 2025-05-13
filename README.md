@@ -30,5 +30,6 @@ Each genome is three "chromosomes" with a single gene centered in each.
 ## WGS long-read
 
 - single, tumor+germline, GRCh38
-- 110X Nanopore tumor in multiple FASTQs
+- 110X Q10 Nanopore tumor in multiple FASTQs
+  - should fail because quality threshold is Q20
 - 40X PacBio HiFi germline in multiple BAMs
