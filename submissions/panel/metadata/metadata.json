@@ -91,8 +91,8 @@
                 "filePath": "tumor_1.fq.gz",
                 "fileType": "fastq",
                 "checksumType": "sha256",
-                "fileChecksum": "94141396915ba4d90cff9722d47fdb5409173acc0029d2562c32798f10718c4d",
-                "fileSizeInBytes": 4576817,
+                "fileChecksum": "6f9e24c34cc81b89161cea0e778141472a8d96b65b6cf429becd6113cc6a4cd8",
+                "fileSizeInBytes": 4576806,
                 "readOrder": "R1",
                 "readLength": 150,
                 "flowcellId": "C1",
@@ -102,8 +102,8 @@
                 "filePath": "tumor_2.fq.gz",
                 "fileType": "fastq",
                 "checksumType": "sha256",
-                "fileChecksum": "ecd86ed91a8616718074458c6ea9cfc901a8c8a43f626ef540c27ee30ee13350",
-                "fileSizeInBytes": 4731013,
+                "fileChecksum": "4b9860c6a1e963b2e1d91e1619cadf2556160b31b077ce9dcd3d4ea5204f9fe8",
+                "fileSizeInBytes": 4731002,
                 "readOrder": "R2",
                 "readLength": 150,
                 "flowcellId": "C1",
@@ -113,8 +113,8 @@
                 "filePath": "targets.bed.gz",
                 "fileType": "bed",
                 "checksumType": "sha256",
-                "fileChecksum": "991464369ce45211747bd9d365505b9458e80752731276fcd492169eacfee08b",
-                "fileSizeInBytes": 66
+                "fileChecksum": "f64919ab44ffb4e075bd5b5013025f0329b2904c3f065af01bca3b37a747a14b",
+                "fileSizeInBytes": 54
               },
               {
                 "filePath": "panel.vcf.gz",

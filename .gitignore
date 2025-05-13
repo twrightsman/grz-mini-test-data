@@ -2,6 +2,7 @@
 references/
 samples/
 submissions/*/files/
+submissions/*/logs/
 
 # pixi environments
 .pixi
