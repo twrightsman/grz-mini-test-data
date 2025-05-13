@@ -65,7 +65,7 @@
           "sequenceData": {
             "bioinformaticsPipelineName": "DNASeq_Pipeline_XYZ",
             "bioinformaticsPipelineVersion": "v3.4.1",
-            "referenceGenome": "GRCh38",
+            "referenceGenome": "GRCh37",
             "percentBasesAboveQualityThreshold": {
               "minimumQuality": 50,
               "percent": 88
@@ -187,7 +187,7 @@
           "sequenceData": {
             "bioinformaticsPipelineName": "DNASeq_Pipeline_XYZ",
             "bioinformaticsPipelineVersion": "v3.4.1",
-            "referenceGenome": "GRCh38",
+            "referenceGenome": "GRCh37",
             "percentBasesAboveQualityThreshold": {
               "minimumQuality": 50,
               "percent": 88
@@ -275,7 +275,7 @@
           "sequenceData": {
             "bioinformaticsPipelineName": "DNASeq_Pipeline_XYZ",
             "bioinformaticsPipelineVersion": "v3.4.1",
-            "referenceGenome": "GRCh38",
+            "referenceGenome": "GRCh37",
             "percentBasesAboveQualityThreshold": {
               "minimumQuality": 50,
               "percent": 88
