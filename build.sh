@@ -12,7 +12,7 @@ mkdir -p references/{GRCh37,GRCh38}
 ## GRCh37
 # Credit: https://stackoverflow.com/a/69982328
 awk '$1 == "chr1"' < hg19_439_omim_genes.bed | shuf --random-source=<(yes 42) | head -n3 > references/GRCh37/test_regions.bed
-GRCh37_OUT="references/GRCh38/chr1.fa.gz"
+GRCh37_OUT="references/GRCh37/chr1.fa.gz"
 if [ ! -f "$GRCh37_OUT" ]; then
   curl https://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.dna.chromosome.1.fa.gz | gzip -cd | sed 's/^>1/>chr1/' | bgzip -@4 -c > "$GRCh37_OUT"
 fi
