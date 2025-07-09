@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/BfArM-MVH/MVGenomseq/refs/tags/v1.1.4/GRZ/grz-schema.json",
+  "$schema": "https://raw.githubusercontent.com/BfArM-MVH/MVGenomseq/refs/tags/v1.1.9/GRZ/grz-schema.json",
   "submission": {
     "submissionDate": "2024-10-28",
     "submissionType": "initial",
@@ -67,12 +67,12 @@
             "bioinformaticsPipelineVersion": "v3.4.1",
             "referenceGenome": "GRCh38",
             "percentBasesAboveQualityThreshold": {
-              "minimumQuality": 50,
-              "percent": 88
+              "minimumQuality": 20,
+              "percent": 98
             },
-            "meanDepthOfCoverage": 40,
+            "meanDepthOfCoverage": 36,
             "minCoverage": 30,
-            "targetedRegionsAboveMinCoverage": 0.9,
+            "targetedRegionsAboveMinCoverage": 1.0,
             "nonCodingVariants": true,
             "callerUsed": [
               {
@@ -89,25 +89,28 @@
                 "filePath": "germline_0001.hifi.bam",
                 "fileType": "bam",
                 "checksumType": "sha256",
-                "fileChecksum": "abcd9515bab1a497b2a80b0da93a7e5a1c805985cd1df94554afefef5e19af34",
-                "fileSizeInBytes": 1517173,
-                "readLength": 9000
+                "fileChecksum": "5a1a1894a68c4b79212c5580e11f29ee933d8ea2de2c22c2898c7fa704b392dd",
+                "fileSizeInBytes": 1472847,
+                "readLength": 9000,
+                "flowcellId": "F1"
               },
               {
                 "filePath": "germline_0002.hifi.bam",
                 "fileType": "bam",
                 "checksumType": "sha256",
-                "fileChecksum": "49e5bfe118469a5bab2e9b62ca886de98ef2445c5cb4474ec0897576ea8b2334",
-                "fileSizeInBytes": 770710,
-                "readLength": 9000
+                "fileChecksum": "572860468ebcb1c41b01f62b43e1bb4dda1f8d2170001b87ada9c4696f7f4ef0",
+                "fileSizeInBytes": 782643,
+                "readLength": 9000,
+                "flowcellId": "F2"
               },
               {
                 "filePath": "germline_0003.hifi.bam",
                 "fileType": "bam",
                 "checksumType": "sha256",
-                "fileChecksum": "aac27fd2c698bb61c1d839542e32e3969b59a46200c6de84e830261c728d1e2c",
-                "fileSizeInBytes": 1602505,
-                "readLength": 9000
+                "fileChecksum": "bee89ddf6d8e6a8c381eb164c5551b6bce62035204f7e66074f225f6e09d6e31",
+                "fileSizeInBytes": 1584379,
+                "readLength": 9000,
+                "flowcellId": "F3"
               },
               {
                 "filePath": "germline.vcf.gz",
@@ -154,12 +157,12 @@
             "bioinformaticsPipelineVersion": "v3.5.0",
             "referenceGenome": "GRCh38",
             "percentBasesAboveQualityThreshold": {
-              "minimumQuality": 50,
-              "percent": 88
+              "minimumQuality": 20,
+              "percent": 80
             },
-            "meanDepthOfCoverage": 110,
+            "meanDepthOfCoverage": 100,
             "minCoverage": 30,
-            "targetedRegionsAboveMinCoverage": 0.85,
+            "targetedRegionsAboveMinCoverage": 1.0,
             "nonCodingVariants": true,
             "callerUsed": [
               {
@@ -176,25 +179,28 @@
                 "filePath": "tumor_0001.fq.gz",
                 "fileType": "fastq",
                 "checksumType": "sha256",
-                "fileChecksum": "710bffa16b2bd40b06a839e3a123d1b65cf200e8e5b769be6f560fb528a47d42",
-                "fileSizeInBytes": 4292621,
-                "readLength": 4795
+                "fileChecksum": "d54a0f75afb808d0307a845295f68ddce9e1091f023cd83f9b28163b6bffae82",
+                "fileSizeInBytes": 3891948,
+                "readLength": 4795,
+                "flowcellId": "F1"
               },
               {
                 "filePath": "tumor_0002.fq.gz",
                 "fileType": "fastq",
                 "checksumType": "sha256",
-                "fileChecksum": "d228e0a499c19f57e2b2156f6348a1cff9e3e1d0bb5a41cc28ae9a4406d5a69f",
-                "fileSizeInBytes": 2314116,
-                "readLength": 6278
+                "fileChecksum": "074b2ffefd5dc3ede3a6d5df3188854e0e8f7b598cc59af75001618b9a1bb973",
+                "fileSizeInBytes": 2071277,
+                "readLength": 6278,
+                "flowcellId": "F2"
               },
               {
                 "filePath": "tumor_0003.fq.gz",
                 "fileType": "fastq",
                 "checksumType": "sha256",
-                "fileChecksum": "e0fc334299f523563769e3a10f14649f290d03d6eb8ecf0872e18fe85a8322cb",
-                "fileSizeInBytes": 4602001,
-                "readLength": 5594
+                "fileChecksum": "2bffe39ceef09db5e0208c1213d126dd2c54e66dc69b7e66c130079a47539a05",
+                "fileSizeInBytes": 4225947,
+                "readLength": 5594,
+                "flowcellId": "F3"
               },
               {
                 "filePath": "tumor.vcf.gz",

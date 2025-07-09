@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/BfArM-MVH/MVGenomseq/refs/tags/v1.1.4/GRZ/grz-schema.json",
+  "$schema": "https://raw.githubusercontent.com/BfArM-MVH/MVGenomseq/refs/tags/v1.1.9/GRZ/grz-schema.json",
   "submission": {
     "submissionDate": "2024-11-08",
     "submissionType": "initial",
@@ -74,11 +74,11 @@
             "referenceGenome": "GRCh37",
             "percentBasesAboveQualityThreshold": {
               "minimumQuality": 30,
-              "percent": 80
+              "percent": 90
             },
             "meanDepthOfCoverage": 225,
             "minCoverage": 200,
-            "targetedRegionsAboveMinCoverage": 0.9,
+            "targetedRegionsAboveMinCoverage": 1.0,
             "nonCodingVariants": true,
             "callerUsed": [
               {

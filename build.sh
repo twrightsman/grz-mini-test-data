@@ -47,13 +47,13 @@ touch submissions/panel/files/panel.vcf.gz
 
 # WGS
 mkdir -p samples/wgs
-simuG -seed 24-index -refSeq references/GRCh37/mini.fa.gz -snp_count 10 -indel_count 5 -prefix samples/wgs/index
-simuG -seed 24-mother -refSeq references/GRCh37/mini.fa.gz -snp_count 10 -indel_count 5 -prefix samples/wgs/mother
-simuG -seed 24-father -refSeq references/GRCh37/mini.fa.gz -snp_count 10 -indel_count 5 -prefix samples/wgs/father
-art_illumina --rndSeed 24-index --seqSys HS25 --in samples/wgs/index.simseq.genome.fa --paired --len 150 --fcov 25 --mflen 500 --sdev 50 --out samples/wgs/index_1_
-art_illumina --rndSeed 24-index-second --seqSys HS25 --in samples/wgs/index.simseq.genome.fa --paired --len 150 --fcov 25 --mflen 500 --sdev 50 --out samples/wgs/index_2_
-art_illumina --rndSeed 24-mother --seqSys HS25 --in samples/wgs/mother.simseq.genome.fa --len 150 --fcov 40 --out samples/wgs/mother
-art_illumina --rndSeed 24-father --seqSys HS25 --in samples/wgs/father.simseq.genome.fa --paired --len 150 --fcov 20 --mflen 500 --sdev 50 --out samples/wgs/father_
+simuG -seed 242424 -refSeq references/GRCh37/mini.fa.gz -snp_count 10 -indel_count 5 -prefix samples/wgs/index
+simuG -seed 2442 -refSeq references/GRCh37/mini.fa.gz -snp_count 10 -indel_count 5 -prefix samples/wgs/mother
+simuG -seed 4224 -refSeq references/GRCh37/mini.fa.gz -snp_count 10 -indel_count 5 -prefix samples/wgs/father
+art_illumina --rndSeed 2424242 --seqSys HS25 --in samples/wgs/index.simseq.genome.fa --paired --len 150 --fcov 25 --mflen 500 --sdev 50 --out samples/wgs/index_1_
+art_illumina --rndSeed 4242424 --seqSys HS25 --in samples/wgs/index.simseq.genome.fa --paired --len 150 --fcov 25 --mflen 500 --sdev 50 --out samples/wgs/index_2_
+art_illumina --rndSeed 2442 --seqSys HS25 --in samples/wgs/mother.simseq.genome.fa --len 150 --fcov 40 --out samples/wgs/mother
+art_illumina --rndSeed 4224 --seqSys HS25 --in samples/wgs/father.simseq.genome.fa --paired --len 150 --fcov 20 --mflen 500 --sdev 50 --out samples/wgs/father_
 gzip -nf samples/wgs/*.fq
 mkdir submissions/wgs/files
 mv samples/wgs/*.fq.gz submissions/wgs/files/
@@ -62,10 +62,10 @@ touch submissions/wgs/files/{index,mother,father}.vcf.gz
 
 # WGS long-read
 mkdir -p samples/wgs_lr
-simuG -seed 24-germline-lr -refSeq references/GRCh38/mini.fa.gz -snp_count 10 -indel_count 5 -prefix samples/wgs_lr/germline
-simuG -seed 24-tumor-lr -refSeq samples/wgs_lr/germline.simseq.genome.fa -snp_count 30 -indel_count 10 -prefix samples/wgs_lr/tumor
-pbsim --strategy wgs --seed 24-tumor-lr-nano --prefix samples/wgs_lr/tumor --genome samples/wgs_lr/tumor.simseq.genome.fa --depth 110 --method qshmm --qshmm "${PIXI_PROJECT_ROOT}/.pixi/envs/default/data/QSHMM-ONT-HQ.model" --accuracy-mean 0.90 --difference-ratio '39:24:36'
-pbsim --strategy wgs --seed 24-germline-lr-pr --prefix samples/wgs_lr/germline --genome samples/wgs_lr/germline.simseq.genome.fa --depth 40 --method errhmm --errhmm "${PIXI_PROJECT_ROOT}/.pixi/envs/default/data/ERRHMM-SEQUEL.model" --pass-num 10
+simuG -seed 2244 -refSeq references/GRCh38/mini.fa.gz -snp_count 10 -indel_count 5 -prefix samples/wgs_lr/germline
+simuG -seed 4422 -refSeq samples/wgs_lr/germline.simseq.genome.fa -snp_count 30 -indel_count 10 -prefix samples/wgs_lr/tumor
+pbsim --strategy wgs --seed 2424242424 --prefix samples/wgs_lr/tumor --genome samples/wgs_lr/tumor.simseq.genome.fa --depth 110 --method qshmm --qshmm "${PIXI_PROJECT_ROOT}/.pixi/envs/default/data/QSHMM-ONT-HQ.model" --accuracy-mean 0.99 --difference-ratio '39:24:36'
+pbsim --strategy wgs --seed 4242424242 --prefix samples/wgs_lr/germline --genome samples/wgs_lr/germline.simseq.genome.fa --depth 40 --method errhmm --errhmm "${PIXI_PROJECT_ROOT}/.pixi/envs/default/data/ERRHMM-SEQUEL.model" --pass-num 10
 ccs samples/wgs_lr/germline_0001.bam samples/wgs_lr/germline_0001.hifi.bam
 ccs samples/wgs_lr/germline_0002.bam samples/wgs_lr/germline_0002.hifi.bam
 ccs samples/wgs_lr/germline_0003.bam samples/wgs_lr/germline_0003.hifi.bam
