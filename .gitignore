@@ -3,6 +3,7 @@ references/
 samples/
 submissions/*/files/
 submissions/*/logs/
+*.tgz
 
 # pixi environments
 .pixi

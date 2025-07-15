@@ -11,14 +11,15 @@ pixi shell
 
 Each genome is three "chromosomes" with a single gene centered in each.
 
+## Submissions
 
-## Panel
+### Panel
 
 - single, tumor-only, GRCh37
 - 225x paired-end run of gene2 and gene3
 
 
-## WGS
+### WGS
 
 - trio, germline-only (rare disease), GRCh37
 - 50X index paired-end in two 25X runs
@@ -27,9 +28,16 @@ Each genome is three "chromosomes" with a single gene centered in each.
   - should fail because under threshold
 
 
-## WGS long-read
+### WGS long-read
 
 - single, tumor+germline, GRCh38
 - 110X Q10 Nanopore tumor in multiple FASTQs
   - should fail because quality threshold is Q20
 - 40X PacBio HiFi germline in multiple BAMs
+
+## Preparing a release
+
+```
+tar -cvzf references.tgz references/*/mini.{fa.gz,genes.bed}
+echo -ne 'panel\0wgs\0wgs_lr' | xargs --null -I{} tar -C submissions/{} -czvf {}.tgz files/ metadata/
+```
