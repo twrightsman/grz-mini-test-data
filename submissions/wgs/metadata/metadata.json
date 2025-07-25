@@ -71,7 +71,7 @@
               "percent": 88
             },
             "meanDepthOfCoverage": 50,
-            "minCoverage": 30,
+            "minCoverage": 20,
             "targetedRegionsAboveMinCoverage": 1.0,
             "nonCodingVariants": true,
             "callerUsed": [
@@ -193,7 +193,7 @@
               "percent": 88
             },
             "meanDepthOfCoverage": 37,
-            "minCoverage": 30,
+            "minCoverage": 20,
             "targetedRegionsAboveMinCoverage": 1.0,
             "nonCodingVariants": true,
             "callerUsed": [
@@ -281,7 +281,7 @@
               "percent": 88
             },
             "meanDepthOfCoverage": 30,
-            "minCoverage": 30,
+            "minCoverage": 20,
             "targetedRegionsAboveMinCoverage": 1.0,
             "nonCodingVariants": true,
             "callerUsed": [
